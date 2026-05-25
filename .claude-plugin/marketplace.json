@@ -1,0 +1,19 @@
+{
+  "name": "zernio",
+  "owner": {
+    "name": "Zernio",
+    "email": "support@zernio.com",
+    "url": "https://zernio.com"
+  },
+  "description": "Official Zernio plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "zernio",
+      "source": "./",
+      "description": "Schedule, publish, and analyze social media across 15+ platforms, plus inbox, ads, and analytics. 314 tools over Zernio's hosted MCP server.",
+      "homepage": "https://docs.zernio.com/resources/mcp",
+      "license": "MIT",
+      "keywords": ["social-media", "scheduling", "mcp"]
+    }
+  ]
+}
