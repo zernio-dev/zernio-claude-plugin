@@ -1,6 +1,6 @@
 {
   "name": "zernio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Schedule, publish, and analyze social media across 15+ platforms (Instagram, TikTok, YouTube, X, LinkedIn, and more), plus inbox, ads, and analytics. 300+ tools over Zernio's hosted MCP server.",
   "author": {
     "name": "Zernio",
@@ -10,14 +10,5 @@
   "homepage": "https://docs.zernio.com/resources/mcp",
   "repository": "https://github.com/zernio-dev/zernio-claude-plugin",
   "license": "MIT",
-  "keywords": ["social-media", "scheduling", "mcp", "instagram", "tiktok", "linkedin", "ads"],
-  "userConfig": {
-    "zernio_api_key": {
-      "type": "string",
-      "title": "Zernio API key",
-      "description": "Create one at https://zernio.com/dashboard/api-keys (starts with sk_).",
-      "sensitive": true,
-      "required": true
-    }
-  }
+  "keywords": ["social-media", "scheduling", "mcp", "instagram", "tiktok", "linkedin", "ads"]
 }

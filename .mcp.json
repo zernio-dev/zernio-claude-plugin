@@ -2,10 +2,7 @@
   "mcpServers": {
     "zernio": {
       "type": "http",
-      "url": "https://mcp.zernio.com/mcp",
-      "headers": {
-        "Authorization": "Bearer ${user_config.zernio_api_key}"
-      }
+      "url": "https://mcp.zernio.com/mcp"
     }
   }
 }

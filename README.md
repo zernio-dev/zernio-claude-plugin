@@ -9,7 +9,9 @@ Schedule, publish, and analyze social media across 16 platforms (Instagram, TikT
 /plugin install zernio@zernio
 ```
 
-When you enable the plugin, Claude Code prompts for your **Zernio API key**. Create one at [zernio.com/dashboard/api-keys](https://zernio.com/dashboard/api-keys) (it starts with `sk_`). The key is stored in your system keychain, never in plaintext.
+Then run `/mcp`, pick **zernio**, and sign in. Your browser opens the Zernio consent screen, you approve, and Claude Code stores the token. There's no API key to copy.
+
+Already have a Zernio account? That's the one you sign in with. If you don't, create it during the flow.
 
 ## What you can do
 
@@ -22,9 +24,23 @@ When you enable the plugin, Claude Code prompts for your **Zernio API key**. Cre
 
 ## How it works
 
-This plugin bundles a single remote MCP server, `https://mcp.zernio.com/mcp` (Streamable HTTP), authenticated with your API key via the `Authorization: Bearer` header. No local install or Python required.
+This plugin bundles a single remote MCP server, `https://mcp.zernio.com/mcp` (Streamable HTTP), authenticated with OAuth 2.0 (PKCE). No local install or Python required, and the tool list comes from the server, so new Zernio endpoints show up without updating the plugin.
 
-> Note: the API-key method is used here because Claude Code plugins can't run a browser OAuth flow. (The Claude.ai / Claude Desktop connector uses OAuth instead.)
+Tokens are short-lived and refresh automatically. Revoke access any time from [zernio.com/dashboard](https://zernio.com/dashboard); that kills this client alone and leaves your API keys and other integrations untouched.
+
+### Headless and CI
+
+`claude -p` and Agent SDK runs can't open a browser, so a machine that has never signed in can't complete OAuth. Two options:
+
+- Sign in once interactively on that machine (`claude mcp login zernio`). The stored token refreshes on its own from then on.
+- Or skip the plugin and configure the server with an API key, which needs no browser:
+
+  ```
+  claude mcp add --transport http zernio https://mcp.zernio.com/mcp \
+    --header "Authorization: Bearer sk_your_key"
+  ```
+
+  Create a key at [zernio.com/dashboard/api-keys](https://zernio.com/dashboard/api-keys).
 
 ## Links
 
