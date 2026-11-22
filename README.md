@@ -21,6 +21,7 @@ Already have a Zernio account? That's the one you sign in with. If you don't, cr
 - "Show my unread Instagram DMs"
 - "What's the best time to post this week?"
 - "List my active Meta ad campaigns and their spend"
+- "My conversions are leaking on brand.com, fix it" (the `fix-conversion-tracking` skill: scan, install the Zernio site tag, forward server-side, verify, rescan)
 
 ## How it works
 
