@@ -1,6 +1,6 @@
 # Zernio for Claude Code
 
-Schedule, publish, and analyze social media across 16 platforms (Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit, Bluesky, WhatsApp, Telegram, Snapchat, Google Business, Discord, Slack) directly from Claude Code, plus a unified inbox, paid-ads management, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
+Schedule, publish, and analyze social media across 18 platforms (Instagram, TikTok, X, LinkedIn, Facebook, YouTube, Threads, Pinterest, Bluesky, Google Business, Snapchat, WhatsApp, Telegram, Discord, Slack, iMessage, LINE, WeChat) directly from Claude Code, plus a unified inbox, paid ads on 9 ad networks, conversion tracking, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
 
 ## Install
 
@@ -21,7 +21,7 @@ Already have a Zernio account? That's the one you sign in with. If you don't, cr
 - "Show my unread Instagram DMs"
 - "What's the best time to post this week?"
 - "List my active Meta ad campaigns and their spend"
-- "My conversions are leaking on brand.com, fix it" (the `fix-conversion-tracking` skill: scan, install the Zernio site tag, forward server-side, verify, rescan)
+- "My conversions are leaking on brand.com, fix it" (the `fix-conversion-tracking` skill: scan, install the Zernio site tag, serve it from the site's domain, forward server-side, load the pixels behind the cookie banner, verify, rescan)
 
 ## How it works
 
